@@ -1,27 +1,27 @@
-let tileNumX;
-let tileNumY;
+let tileNumX = 16;
+let tileNumY = 12;
 
 function setup() {
   createCanvas(640, 480);
 }
 
 function draw() {
-  background(220);
+  background('#333333');
   noStroke();
-  fill('red');
-  // for (let colume = 0; colume < width; colume += 40) {
-  //   for (let row = 0; row < width; row += 40) {
-  //     let x = 20 + colume;
+  fill('cornflowerblue');
+  // for (let column = 0; column < width; column += 40) {
+  //   for (let row = 0; row < height; row += 40) {
+  //     let x = 20 + column;
   //     let y = 20 + row;
   //     let diameter = 30;
   //     circle(x, y, diameter);
   //   }
   // }
   for (let row = 0; row < tileNumY; row++) {
-    for (let colume = 0; row < tileNumX; colume++) {
+    for (let column = 0; column < tileNumX; column++) {
       let tileW = width / tileNumX;
       let tileH = height / tileNumY;
-      let x = tileW * 0.5 + colume * tileW;
+      let x = tileW * 0.5 + column * tileW;
       let y = tileH * 0.5 + row * tileH;
       ellipse(x, y, tileW, tileH);
     }
